@@ -27,6 +27,8 @@ jobs:
       uses: jetli/trunk-action@v0.1.0
       with:
         version: 'latest'
+    - name: Create assets directory
+      run: mkdir -p assets
     - name: Build
       run: trunk build
     - name: Run tests
