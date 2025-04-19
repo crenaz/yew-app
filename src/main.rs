@@ -6,14 +6,16 @@ fn App() -> Html {
     let onclick = {
         let counter = counter.clone();
         move |_| {
-            let value = *counter + 1;
+            let value = *counter + 2;
             counter.set(value);
         }
     };
 
     html! {
         <div>
-            <button {onclick}>{ "+1" }</button>
+            <h1>{"This is a Yew app built with Trunk"}</h1>
+            <p>{"Just for clicks"}</p>
+            <button {onclick}>{ "+2" }</button>
             <p>{ *counter }</p>
         </div>
     }
